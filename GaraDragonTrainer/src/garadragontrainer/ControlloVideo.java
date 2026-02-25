@@ -79,7 +79,7 @@ public class ControlloVideo {
      */
     public void rimuoviVideo() {
         lblVideo.setIcon(null);
-        lblVideo.setText("");
+        lblVideo.setText(" ");
     }
 }
 

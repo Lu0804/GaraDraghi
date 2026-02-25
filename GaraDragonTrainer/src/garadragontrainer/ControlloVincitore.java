@@ -41,20 +41,20 @@ public void avvia() {
         // Controlla DRAGO 1:
         // Se d1 ha finito (isFinito() torna true)
         // E la label ancora dice "." (non è stata assegnata)
-        if (d1.isFinito() && lblVincitore1.getText().equals(".")) {
+        if (d1.isFinito() && lblVincitore1.getText().equals(" ")) {
             aggiornaVincitore(lblVincitore1);  // Assegna la posizione
         }
         
         // Stessa logica per gli altri 3 draghi
-        if (d2.isFinito() && lblVincitore2.getText().equals(".")) {
+        if (d2.isFinito() && lblVincitore2.getText().equals(" ")) {
             aggiornaVincitore(lblVincitore2);
         }
         
-        if (d3.isFinito() && lblVincitore3.getText().equals(".")) {
+        if (d3.isFinito() && lblVincitore3.getText().equals(" ")) {
             aggiornaVincitore(lblVincitore3);
         }
         
-        if (d4.isFinito() && lblVincitore4.getText().equals(".")) {
+        if (d4.isFinito() && lblVincitore4.getText().equals(" ")) {
             aggiornaVincitore(lblVincitore4);
         }
    

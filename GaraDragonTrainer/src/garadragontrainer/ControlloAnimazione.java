@@ -46,7 +46,7 @@ public class ControlloAnimazione {
             
             // Assegna l'icona alla label
             lblDrago.setIcon(iconScalata);// Metti l'icona nella label
-            lblDrago.setText(""); // Rimuovi il testo (se c'era)
+            lblDrago.setText(" "); // Rimuovi il testo (se c'era)
             
         } catch (Exception e) { // Se c'è un errore (file non trovato, ecc)
             System.out.println("Errore nel caricamento dell'immagine: " + e.getMessage());
