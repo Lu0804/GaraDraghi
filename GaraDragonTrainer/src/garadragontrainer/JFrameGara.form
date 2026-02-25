@@ -24,65 +24,59 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Component id="btnAvvia" min="-2" pref="83" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+              <Component id="btnPausa" min="-2" pref="83" max="-2" attributes="0"/>
+              <EmptySpace min="54" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="lblDrago3" min="-2" pref="62" max="-2" attributes="0"/>
+                  <Component id="lblDrago4" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
+                  <Component id="lblDrago2" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
+                  <Component id="lblDrago1" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                      <Component id="btnAvvia" min="-2" pref="83" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
-                      <Component id="btnPausa" min="-2" pref="83" max="-2" attributes="0"/>
-                      <EmptySpace min="54" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="lblDrago4" min="-2" pref="54" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="lblDrago2" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="lblDrago1" pref="54" max="32767" attributes="0"/>
-                              <Component id="lblDrago3" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Component id="pgrDrago1" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
+                          <Component id="pgrDrago4" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
+                          <Component id="pgrDrago3" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
+                          <Component id="lblIconDrago4" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="lblIconDrago3" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="lblIconDrago1" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="49" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="pgrDrago1" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
-                                  <Component id="pgrDrago4" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
-                                  <Component id="pgrDrago3" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
-                                  <Component id="lblIconDrago4" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="lblIconDrago3" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="lblIconDrago1" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="lblVincitore2" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="lblVincitore1" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="49" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblVincitore2" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                          <Component id="lblVincitore1" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="199" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="lblVincitore4" min="-2" pref="48" max="-2" attributes="0"/>
-                                          <Component id="btnReset" min="-2" pref="83" max="-2" attributes="0"/>
-                                          <Component id="lblVincitore3" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btnGioca" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <EmptySpace min="-2" pref="199" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="pgrDrago2" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
-                                  <Component id="lblIconDrago2" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="lblVincitore4" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="btnReset" min="-2" pref="83" max="-2" attributes="0"/>
+                                  <Component id="lblVincitore3" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
+                              <Component id="btnGioca" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="pgrDrago2" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
+                          <Component id="lblIconDrago2" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
