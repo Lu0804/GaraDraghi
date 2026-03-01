@@ -62,7 +62,7 @@ public class Inizio extends javax.swing.JFrame {
         jTextArea1.setSelectedTextColor(new java.awt.Color(210, 180, 100));
         jScrollPane1.setViewportView(jTextArea1);
 
-        lblSdentato.setIcon(new javax.swing.ImageIcon("src/immagini/sdentato.png"));
+        lblSdentato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/immagini/sdentato.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -90,7 +90,7 @@ public class Inizio extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(lblTitolo, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblSdentato)
+                .addComponent(lblSdentato, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)

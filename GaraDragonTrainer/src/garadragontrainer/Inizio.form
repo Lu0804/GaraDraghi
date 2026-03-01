@@ -72,7 +72,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="lblTitolo" min="-2" pref="64" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="lblSdentato" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblSdentato" min="-2" pref="194" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="106" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -139,6 +139,9 @@
         </Container>
         <Component class="javax.swing.JLabel" name="lblSdentato">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/immagini/sdentato.png"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>

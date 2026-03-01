@@ -18,9 +18,9 @@ import java.io.File;
  */
 public class ControlloAttacco {
     
-    private JLabel lblAttacco;          
-    private JButton btnSchiva;           
-    private Drago dragoGiocatore;        
+    private JLabel lblAttacco; //lbl del drago         
+    private JButton btnSchiva;  //bottone schiva         
+    private Drago dragoGiocatore;  //drago del giocatore (drago 1)      
     private Timer timerAttacchi;         
     private Timer timerReazione;          
     private Random random;              
@@ -57,8 +57,7 @@ public class ControlloAttacco {
         lblAttacco.setVisible(false);
         btnSchiva.setVisible(false);
         
-        // Forza il Look&Feel di default (Basic) solo su questo bottone
-        // Nimbus ignora setBackground(), BasicButtonUI invece lo rispetta sempre
+       //grafica bottone
         btnSchiva.setUI(new javax.swing.plaf.basic.BasicButtonUI());
         btnSchiva.setOpaque(true);
         btnSchiva.setBorderPainted(false);
@@ -80,8 +79,7 @@ public class ControlloAttacco {
             
             lblAttacco.setIcon(icon);
             lblAttacco.setText("");
-            System.out.println("✅ GIF attacco caricata OK: " + percorsoGif + 
-                " (" + icon.getIconWidth() + "x" + icon.getIconHeight() + ")");
+     
             
         } catch (Exception e) {
             System.out.println("❌ ERRORE caricamento GIF attacco: " + e.getMessage());
@@ -128,7 +126,7 @@ public class ControlloAttacco {
      * Esegue un attacco
      */
     private void eseguiAttacco() {
-        // IMPORTANTE: Non attaccare se il drago ha già finito!
+        //se il drago ha finito la corsa non viene attacato
         if (dragoGiocatore.isFinito()) {
             return;
         }
