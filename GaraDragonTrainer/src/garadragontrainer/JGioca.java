@@ -10,13 +10,20 @@ package garadragontrainer;
  */
 public class JGioca extends javax.swing.JFrame {
   private ControlloVideo cv;
+  private ControlloAttacco ca;
+  private Drago dragoGiocatore;
     /**
      * Creates new form JGioca
      */
-    public JGioca() {
+    public JGioca( Drago dragoGiocatore) {
+        this.dragoGiocatore= dragoGiocatore;
         initComponents();
         setupVideo();
+        setupAttacchi();
     }
+        public JGioca(){
+        this(null);
+        }
 private void setupVideo() {
         // Crea l'istanza del controllo video
         cv = new ControlloVideo(lblVideo);
@@ -24,10 +31,29 @@ private void setupVideo() {
         // Carica la GIF (dimensione originale)
         cv.caricaVideo("src/immagini/Video_Pov1.gif");
         
-        // OPPURE carica la GIF ridimensionata (es. 400x300 pixel)
-        // controlloVideo.caricaVideoRidimensionato("Video_Pov.gif", 400, 300);
+        
+    }
+    private void setupAttacchi() {
+        if (dragoGiocatore == null) {
+            System.out.println("Errore! il drago non esiste");
+            btnSchiva.setEnabled(false);
+            return;
+        }
+        //crea controllo attacchi - PASSA ANCHE IL PANNELLO!
+        ca = new ControlloAttacco(lblAttacco, btnSchiva, dragoGiocatore, jPanel1);
+        //carica la gif di attacco 
+        ca.caricaGifAttacco("src/immagini/DragoAttacco_small.gif");
+        //avvia gli attacchi casuali 
+        ca.avvia();
     }
     
+    
+    //ferma gli attacchi quando si chiude la finestra 
+    public void fermaAttacchi(){
+        if (ca != null){
+            ca.ferma();
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,15 +63,66 @@ private void setupVideo() {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        lblAttacco = new javax.swing.JLabel();
         lblVideo = new javax.swing.JLabel();
+        btnSchiva = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(420, 700));
 
-        lblVideo.setText("jLabel1");
-        getContentPane().add(lblVideo, java.awt.BorderLayout.CENTER);
+        jPanel1.setBackground(new java.awt.Color(18, 22, 40));
+        jPanel1.setLayout(null);
+
+        lblAttacco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/immagini/DragoAttacco.gif"))); // NOI18N
+        lblAttacco.setMaximumSize(new java.awt.Dimension(500, 500));
+        lblAttacco.setPreferredSize(new java.awt.Dimension(300, 300));
+        jPanel1.add(lblAttacco);
+        lblAttacco.setBounds(220, 0, 180, 150);
+
+        lblVideo.setMaximumSize(new java.awt.Dimension(1000, 500));
+        lblVideo.setMinimumSize(new java.awt.Dimension(100, 50));
+        lblVideo.setName(""); // NOI18N
+        lblVideo.setPreferredSize(new java.awt.Dimension(600, 500));
+        jPanel1.add(lblVideo);
+        lblVideo.setBounds(0, 0, 400, 500);
+
+        btnSchiva.setBackground(new java.awt.Color(140, 35, 35));
+        btnSchiva.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 2, 24)); // NOI18N
+        btnSchiva.setForeground(new java.awt.Color(255, 255, 255));
+        btnSchiva.setText("Schiva!");
+        btnSchiva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSchivaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSchiva);
+        btnSchiva.setBounds(110, 550, 160, 60);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSchivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSchivaActionPerformed
+       if(ca != null){
+           ca.schivaAttacco();
+       }
+    }//GEN-LAST:event_btnSchivaActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // Ferma gli attacchi quando si chiude la finestra
+        fermaAttacchi();
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
@@ -83,6 +160,9 @@ private void setupVideo() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSchiva;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblAttacco;
     private javax.swing.JLabel lblVideo;
     // End of variables declaration//GEN-END:variables
 }

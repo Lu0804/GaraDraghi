@@ -4,7 +4,6 @@
  */
 package garadragontrainer;
 import javax.swing.*;
-import java.awt.Image;
 import java.awt.Container;
 
 /**
@@ -31,24 +30,22 @@ public class ControlloAnimazione {
     }
     
     /**
-     * Carica un'icona/gif e la posiziona sulla progress bar
-     * La icona seguirà il progresso della barra
+     * Carica la GIF animata pre-ridimensionata (usa i file _small.gif)
+     * NON usare getScaledInstance() - distrugge l'animazione GIF
      */
     public void caricaIconaDrago(String percorsoImmagine) {
         try {
-            // Carica l'immagine, ImageIcon legge il file e lo converte in icona
+            // Carica la GIF direttamente - ImageIcon gestisce l'animazione automaticamente
             ImageIcon icon = new ImageIcon(percorsoImmagine);
             
-            // Ridimensiona l'immagine
-            Image img = icon.getImage(); //Estrae l'immagine da ImageIcon
-            Image imgScalata = img.getScaledInstance(40, 40, Image.SCALE_SMOOTH);//Ridimensiona l'immagine a 40x40 pixel (Image.SCALE_SMOOTH = qualità migliore)
-            ImageIcon iconScalata = new ImageIcon(imgScalata); //Converti l'immagine ridimensionata in ImageIcon
+            lblDrago.setIcon(icon);
+            lblDrago.setText("");
+            // Dimensione della label uguale alla GIF pre-ridimensionata (60x40)
+            lblDrago.setSize(80, 55);
+            lblDrago.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+            lblDrago.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
             
-            // Assegna l'icona alla label
-            lblDrago.setIcon(iconScalata);// Metti l'icona nella label
-            lblDrago.setText(" "); // Rimuovi il testo (se c'era)
-            
-        } catch (Exception e) { // Se c'è un errore (file non trovato, ecc)
+        } catch (Exception e) {
             System.out.println("Errore nel caricamento dell'immagine: " + e.getMessage());
         }
     }

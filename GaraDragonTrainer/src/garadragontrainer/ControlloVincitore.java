@@ -76,15 +76,32 @@ public void ferma() {
 
 private void aggiornaVincitore(JLabel label) {
     // Array che contiene le 4 posizioni possibili
-    String[] posizioni = {"👑 1°", "2°", "3°", "4°"};
+    String[] posizioni = {"1°", "2°", "3°", "4°"};
     
-    // Legge la posizione attuale (posizione - 1 perché gli array partono da 0)
-    // Esempio, Se posizione = 1, prende posizioni[0] = "👑 1°"
-
     label.setText(posizioni[posizione - 1]);
     
-    // Incrementa posizione per il prossimo drago
-    // Così il prossimo drago avrà la posizione successiva
+    // Se è il primo a finire (posizione == 1) apri la schermata risultato
+    if (posizione == 1) {
+        // Capisce quale drago ha vinto confrontando le label
+        int dragoVincitore;
+        if (label == lblVincitore1) {
+            dragoVincitore = 1;
+        } else if (label == lblVincitore2) {
+            dragoVincitore = 2;
+        } else if (label == lblVincitore3) {
+            dragoVincitore = 3;
+        } else {
+            dragoVincitore = 4;
+        }
+        
+        // Apri la schermata del vincitore dopo 1 secondo (per vedere il 1° sulla label)
+        javax.swing.Timer timerApertura = new javax.swing.Timer(1000, e -> {
+            new JVincitore(dragoVincitore).setVisible(true);
+        });
+        timerApertura.setRepeats(false);
+        timerApertura.start();
+    }
+    
     posizione++;
 }
 
@@ -94,6 +111,3 @@ public void reset() {
 }
 
 }
-
-
-

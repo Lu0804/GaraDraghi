@@ -3,14 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/abenante.lucia/Desktop/GaraDragonTrainer/GaraDragonTrainer/src/garadragontrainer/ControlloAnimazione.java</file>
-            <file>file:/C:/Users/abenante.lucia/Desktop/GaraDragonTrainer/GaraDragonTrainer/src/garadragontrainer/ControlloVincitore.java</file>
-            <file>file:/C:/Users/abenante.lucia/Desktop/GaraDragonTrainer/GaraDragonTrainer/src/garadragontrainer/Drago.java</file>
-            <file>file:/C:/Users/abenante.lucia/Desktop/GaraDragonTrainer/GaraDragonTrainer/src/garadragontrainer/GaraDragonTrainer.java</file>
-            <file>file:/C:/Users/abenante.lucia/Desktop/GaraDragonTrainer/GaraDragonTrainer/src/garadragontrainer/JGara.java</file>
-            <file>file:/C:/Users/abenante.lucia/Desktop/GaraDragonTrainer/GaraDragonTrainer/src/garadragontrainer/JFrameGara.java</file>
-            <file>file:/C:/Users/abenante.lucia/Desktop/GaraDragonTrainer/GaraDragonTrainer/src/immagini/thootless_1.gif</file>
-            <file>file:/C:/Users/abenante.lucia/Desktop/GaraDragonTrainer/GaraDragonTrainer/src/immagini/stormfly.gif</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/ControlloAnimazione.java</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/ControlloVideo.java</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/ControlloVincitore.java</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/Drago.java</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/Evento.java</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/GaraDragonTrainer.java</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/JFrameGara.java</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/JGioca.java</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/ControlloAttacco.java</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/ControlloDanniCasuali.java</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/Inizio.java</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/immagini/stormfly.gif</file>
+            <file>file:/C:/Users/lucia/Desktop/GaraDraghi/GaraDragonTrainer/src/garadragontrainer/JVincitore.java</file>
         </group>
     </open-files>
 </project-private>

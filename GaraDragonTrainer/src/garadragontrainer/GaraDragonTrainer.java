@@ -15,7 +15,7 @@ public class GaraDragonTrainer {
      */
     public static void main(String[] args) {
     
-     new JFrameGara().setVisible(true);
+     new Inizio().setVisible(true);
      
     }
     

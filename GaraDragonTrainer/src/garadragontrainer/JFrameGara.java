@@ -1,4 +1,4 @@
-                                                                                                                                                                         /*
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -6,32 +6,50 @@ package garadragontrainer;
 
 public class JFrameGara extends javax.swing.JFrame {
 
-       private Drago d1, d2, d3, d4;
+    private Drago d1, d2, d3, d4;
     private ControlloVincitore c; // Usa la classe separata
     private ControlloAnimazione anim1, anim2, anim3, anim4; // le animazioni
+    private ControlloDanniCasuali dannoCasuale2, dannoCasuale3, dannoCasuale4;
 
     public JFrameGara() {
         initComponents();
         getContentPane().setLayout(null);
-    
-    // Crea le label per le icone
-    lblIconDrago1 = new javax.swing.JLabel();
-    lblIconDrago2 = new javax.swing.JLabel();
-    lblIconDrago3 = new javax.swing.JLabel();
-    lblIconDrago4 = new javax.swing.JLabel();
-    
-    // Aggiungi al pannello
-    getContentPane().add(lblIconDrago1);
-    getContentPane().add(lblIconDrago2);
-    getContentPane().add(lblIconDrago3);
-    getContentPane().add(lblIconDrago4);
-    
-    // Imposta size
-    lblIconDrago1.setSize(40, 40);
-    lblIconDrago2.setSize(40, 40);
-    lblIconDrago3.setSize(40, 40);
-    lblIconDrago4.setSize(40, 40);
+        setupIconLabels();
+        
+
     }
+	/**
+     * Sistema le label delle icone dei draghi
+     * Le posiziona sopra le progress bar e le rende visibili
+     */
+    private void setupIconLabels() {
+        // Imposta dimensioni corrette (non 0!)
+        lblIconDrago1.setSize(50, 50);
+        lblIconDrago2.setSize(50, 50);
+        lblIconDrago3.setSize(50, 50);
+        lblIconDrago4.setSize(50, 50);
+        
+        // Posiziona le label sopra le progress bar (posizione iniziale)
+        // X = posizione X della progress bar + margine sinistro
+        // Y = posizione Y della progress bar - 55 (sopra la barra)
+        lblIconDrago1.setLocation(141, 136 - 55);
+        lblIconDrago2.setLocation(141, 250 - 55);
+        lblIconDrago3.setLocation(141, 372 - 55);
+        lblIconDrago4.setLocation(141, 507 - 55);
+        
+        // Rendi visibili le label portandole in primo piano
+        lblIconDrago1.setVisible(true);
+        lblIconDrago2.setVisible(true);
+        lblIconDrago3.setVisible(true);
+        lblIconDrago4.setVisible(true);
+        
+        // Porta le label in primo piano (sopra tutto)
+        getContentPane().setComponentZOrder(lblIconDrago1, 0);
+        getContentPane().setComponentZOrder(lblIconDrago2, 0);
+        getContentPane().setComponentZOrder(lblIconDrago3, 0);
+        getContentPane().setComponentZOrder(lblIconDrago4, 0);
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,204 +60,201 @@ public class JFrameGara extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pgrDrago2 = new javax.swing.JProgressBar();
-        pgrDrago3 = new javax.swing.JProgressBar();
-        pgrDrago4 = new javax.swing.JProgressBar();
-        pgrDrago1 = new javax.swing.JProgressBar();
-        lblDrago1 = new javax.swing.JLabel();
-        lblDrago2 = new javax.swing.JLabel();
-        lblDrago3 = new javax.swing.JLabel();
-        lblDrago4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        btnGioca = new javax.swing.JButton();
+        lblVincitore4 = new javax.swing.JLabel();
+        lblVincitore3 = new javax.swing.JLabel();
         btnAvvia = new javax.swing.JButton();
+        lblDrago4 = new javax.swing.JLabel();
+        lblDrago3 = new javax.swing.JLabel();
+        lblDrago2 = new javax.swing.JLabel();
+        lblDrago1 = new javax.swing.JLabel();
+        pgrDrago1 = new javax.swing.JProgressBar();
         btnPausa = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
         lblVincitore1 = new javax.swing.JLabel();
+        pgrDrago2 = new javax.swing.JProgressBar();
+        pgrDrago3 = new javax.swing.JProgressBar();
         lblVincitore2 = new javax.swing.JLabel();
-        lblVincitore3 = new javax.swing.JLabel();
-        lblVincitore4 = new javax.swing.JLabel();
+        pgrDrago4 = new javax.swing.JProgressBar();
         lblIconDrago2 = new javax.swing.JLabel();
         lblIconDrago1 = new javax.swing.JLabel();
         lblIconDrago3 = new javax.swing.JLabel();
         lblIconDrago4 = new javax.swing.JLabel();
-        btnGioca = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 102));
+        setMaximumSize(new java.awt.Dimension(910, 814));
+        setPreferredSize(new java.awt.Dimension(910, 750));
+        setResizable(false);
+        getContentPane().setLayout(null);
 
-        pgrDrago2.setBackground(new java.awt.Color(255, 255, 51));
-        pgrDrago2.setForeground(new java.awt.Color(51, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(18, 22, 40));
+        jPanel1.setDoubleBuffered(false);
+        jPanel1.setMaximumSize(new java.awt.Dimension(910, 814));
+        jPanel1.setMinimumSize(new java.awt.Dimension(910, 750));
+        jPanel1.setPreferredSize(new java.awt.Dimension(910, 750));
+        jPanel1.setLayout(null);
 
-        pgrDrago3.setBackground(new java.awt.Color(255, 102, 0));
-        pgrDrago3.setForeground(new java.awt.Color(204, 0, 0));
-
-        pgrDrago4.setBackground(new java.awt.Color(153, 51, 0));
-        pgrDrago4.setForeground(new java.awt.Color(51, 204, 0));
-
-        pgrDrago1.setBackground(new java.awt.Color(153, 153, 153));
-        pgrDrago1.setForeground(new java.awt.Color(0, 0, 0));
-
-        lblDrago1.setText("Drago 1");
-
-        lblDrago2.setText("Drago 2");
-
-        lblDrago3.setText("Drago 3");
-
-        lblDrago4.setText("Drago 4");
-
-        btnAvvia.setBackground(new java.awt.Color(150, 190, 220));
-        btnAvvia.setText("Avvia");
-        btnAvvia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAvviaActionPerformed(evt);
-            }
-        });
-
-        btnPausa.setBackground(new java.awt.Color(150, 200, 150));
-        btnPausa.setText("Pausa");
-        btnPausa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPausaActionPerformed(evt);
-            }
-        });
-
-        btnReset.setBackground(new java.awt.Color(200, 200, 200));
-        btnReset.setText("Reset");
-        btnReset.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResetActionPerformed(evt);
-            }
-        });
-
-        lblVincitore1.setText(" ");
-
-        lblVincitore2.setForeground(new java.awt.Color(255, 204, 0));
-        lblVincitore2.setText(" ");
-
-        lblVincitore3.setForeground(new java.awt.Color(255, 102, 0));
-        lblVincitore3.setText(" ");
-
-        lblVincitore4.setForeground(new java.awt.Color(153, 51, 0));
-        lblVincitore4.setText(" ");
-
-        lblIconDrago2.setText(" ");
-
-        lblIconDrago1.setText(" ");
-
-        lblIconDrago3.setText(" ");
-
-        lblIconDrago4.setText(" ");
-
-        btnGioca.setBackground(new java.awt.Color(102, 102, 255));
+        btnGioca.setBackground(new java.awt.Color(114, 35, 90));
+        btnGioca.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
+        btnGioca.setForeground(new java.awt.Color(255, 255, 255));
         btnGioca.setText("Gioca");
         btnGioca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGiocaActionPerformed(evt);
             }
         });
+        jPanel1.add(btnGioca);
+        btnGioca.setBounds(250, 580, 280, 70);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(btnAvvia, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(132, 132, 132)
-                .addComponent(btnPausa, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblDrago3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDrago4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDrago2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDrago1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pgrDrago1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pgrDrago4, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pgrDrago3, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblIconDrago4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblIconDrago3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblIconDrago1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(43, 43, 43)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblVincitore2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblVincitore1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(199, 199, 199))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblVincitore4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblVincitore3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnGioca)
-                                .addGap(41, 41, 41))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pgrDrago2, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblIconDrago2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(lblIconDrago1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(pgrDrago1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDrago1)
-                    .addComponent(lblVincitore1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addComponent(lblIconDrago2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblDrago2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(pgrDrago2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                        .addComponent(lblIconDrago3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblVincitore3)
-                                .addGap(65, 65, 65)
-                                .addComponent(lblVincitore4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblDrago3)
-                                    .addComponent(pgrDrago3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                                .addComponent(lblIconDrago4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblDrago4)
-                                    .addComponent(pgrDrago4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(88, 88, 88)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnPausa, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnAvvia, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnGioca, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(37, 37, 37))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblVincitore2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
+        lblVincitore4.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        lblVincitore4.setForeground(new java.awt.Color(150, 150, 150));
+        lblVincitore4.setText(" ");
+        jPanel1.add(lblVincitore4);
+        lblVincitore4.setBounds(670, 500, 60, 40);
+
+        lblVincitore3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        lblVincitore3.setForeground(new java.awt.Color(180, 180, 180));
+        lblVincitore3.setText(" ");
+        jPanel1.add(lblVincitore3);
+        lblVincitore3.setBounds(670, 360, 60, 40);
+
+        btnAvvia.setBackground(new java.awt.Color(60, 110, 80));
+        btnAvvia.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        btnAvvia.setForeground(new java.awt.Color(255, 255, 255));
+        btnAvvia.setText("Avvia");
+        btnAvvia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAvviaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnAvvia);
+        btnAvvia.setBounds(780, 90, 100, 70);
+
+        lblDrago4.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        lblDrago4.setForeground(new java.awt.Color(210, 180, 100));
+        lblDrago4.setText("Drago 4");
+        jPanel1.add(lblDrago4);
+        lblDrago4.setBounds(19, 507, 54, 16);
+
+        lblDrago3.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        lblDrago3.setForeground(new java.awt.Color(210, 180, 100));
+        lblDrago3.setText("Drago 3");
+        jPanel1.add(lblDrago3);
+        lblDrago3.setBounds(19, 372, 62, 16);
+
+        lblDrago2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        lblDrago2.setForeground(new java.awt.Color(210, 180, 100));
+        lblDrago2.setText("Drago 2");
+        jPanel1.add(lblDrago2);
+        lblDrago2.setBounds(19, 250, 59, 16);
+
+        lblDrago1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        lblDrago1.setForeground(new java.awt.Color(210, 180, 100));
+        lblDrago1.setText("Drago 1");
+        jPanel1.add(lblDrago1);
+        lblDrago1.setBounds(19, 136, 54, 16);
+
+        pgrDrago1.setBackground(new java.awt.Color(153, 153, 153));
+        pgrDrago1.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(pgrDrago1);
+        pgrDrago1.setBounds(141, 136, 500, 28);
+
+        btnPausa.setBackground(new java.awt.Color(140, 100, 30));
+        btnPausa.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        btnPausa.setForeground(new java.awt.Color(255, 255, 255));
+        btnPausa.setText("Pausa");
+        btnPausa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPausaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnPausa);
+        btnPausa.setBounds(780, 270, 100, 70);
+
+        btnReset.setBackground(new java.awt.Color(70, 75, 90));
+        btnReset.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        btnReset.setForeground(new java.awt.Color(255, 255, 255));
+        btnReset.setText("Reset");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnReset);
+        btnReset.setBounds(780, 460, 100, 70);
+
+        lblVincitore1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        lblVincitore1.setForeground(new java.awt.Color(255, 210, 60));
+        lblVincitore1.setText(" ");
+        jPanel1.add(lblVincitore1);
+        lblVincitore1.setBounds(670, 130, 60, 40);
+
+        pgrDrago2.setBackground(new java.awt.Color(255, 255, 51));
+        pgrDrago2.setForeground(new java.awt.Color(51, 204, 255));
+        jPanel1.add(pgrDrago2);
+        pgrDrago2.setBounds(141, 250, 500, 28);
+
+        pgrDrago3.setBackground(new java.awt.Color(255, 102, 0));
+        pgrDrago3.setForeground(new java.awt.Color(204, 0, 0));
+        jPanel1.add(pgrDrago3);
+        pgrDrago3.setBounds(141, 372, 500, 28);
+
+        lblVincitore2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        lblVincitore2.setForeground(new java.awt.Color(200, 200, 200));
+        lblVincitore2.setText(" ");
+        jPanel1.add(lblVincitore2);
+        lblVincitore2.setBounds(670, 240, 60, 40);
+
+        pgrDrago4.setBackground(new java.awt.Color(153, 51, 0));
+        pgrDrago4.setForeground(new java.awt.Color(51, 204, 0));
+        jPanel1.add(pgrDrago4);
+        pgrDrago4.setBounds(141, 507, 500, 28);
+
+        lblIconDrago2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/immagini/stormfly.gif"))); // NOI18N
+        lblIconDrago2.setMaximumSize(new java.awt.Dimension(60, 60));
+        lblIconDrago2.setMinimumSize(new java.awt.Dimension(50, 50));
+        lblIconDrago2.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel1.add(lblIconDrago2);
+        lblIconDrago2.setBounds(140, 160, 230, 90);
+
+        lblIconDrago1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/immagini/thootless.gif"))); // NOI18N
+        lblIconDrago1.setText(" ");
+        lblIconDrago1.setMaximumSize(new java.awt.Dimension(50, 50));
+        lblIconDrago1.setMinimumSize(new java.awt.Dimension(50, 50));
+        lblIconDrago1.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel1.add(lblIconDrago1);
+        lblIconDrago1.setBounds(140, 40, 60, 90);
+
+        lblIconDrago3.setBackground(new java.awt.Color(208, 242, 242));
+        lblIconDrago3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/immagini/hookfang.gif"))); // NOI18N
+        lblIconDrago3.setText(" ");
+        lblIconDrago3.setMaximumSize(new java.awt.Dimension(50, 50));
+        lblIconDrago3.setMinimumSize(new java.awt.Dimension(50, 50));
+        lblIconDrago3.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel1.add(lblIconDrago3);
+        lblIconDrago3.setBounds(140, 290, 70, 80);
+
+        lblIconDrago4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/immagini/barfBelch.gif"))); // NOI18N
+        lblIconDrago4.setText(" ");
+        lblIconDrago4.setMaximumSize(new java.awt.Dimension(50, 50));
+        lblIconDrago4.setMinimumSize(new java.awt.Dimension(50, 50));
+        lblIconDrago4.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel1.add(lblIconDrago4);
+        lblIconDrago4.setBounds(140, 420, 90, 80);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 910, 810);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAvviaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAvviaActionPerformed
-                                        
+      //bottoni
+      btnPausa.setEnabled(true);
+        btnReset.setEnabled(true);
+        btnGioca.setEnabled(true);
     // Crea le animazioni e carica le gif
     anim1 = new ControlloAnimazione(lblIconDrago1, pgrDrago1, getContentPane());
     anim2 = new ControlloAnimazione(lblIconDrago2, pgrDrago2, getContentPane());
@@ -248,10 +263,10 @@ public class JFrameGara extends javax.swing.JFrame {
     
  
    // Carica le immagini gif
-anim1.caricaIconaDrago("src/immagini/stormfly.gif");
+anim1.caricaIconaDrago("src/immagini/thootless.gif");
 anim2.caricaIconaDrago("src/immagini/stormfly.gif");
-anim3.caricaIconaDrago("src/immagini/stormfly.gif");
-anim4.caricaIconaDrago("src/immagini/stormfly.gif");
+anim3.caricaIconaDrago("src/immagini/hookfang.gif");
+anim4.caricaIconaDrago("src/immagini/barfBelch.gif");
     // Crea i draghi con le animazioni
     d1 = new Drago(pgrDrago1, anim1);
     d2 = new Drago(pgrDrago2, anim2);
@@ -271,57 +286,102 @@ anim4.caricaIconaDrago("src/immagini/stormfly.gif");
     // Crea e avvia il controllo vincitori
     c = new ControlloVincitore (d1, d2, d3, d4, lblVincitore1, lblVincitore2, lblVincitore3, lblVincitore4);
     c.avvia();
+    btnAvvia.setEnabled(false);
+            // Avvia i danni casuali per gli altri 3 draghi (non il giocatore!)
+        dannoCasuale2 = new ControlloDanniCasuali(d2);
+        dannoCasuale3 = new ControlloDanniCasuali(d3);
+        dannoCasuale4 = new ControlloDanniCasuali(d4);
+        
+        dannoCasuale2.avvia();
+        dannoCasuale3.avvia();
+        dannoCasuale4.avvia();
 
     }//GEN-LAST:event_btnAvviaActionPerformed
 
     private void btnPausaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPausaActionPerformed
-    
-    if (d1 == null) return;
-    
-    if (btnPausa.getText().equals("Pausa")) {
-        d1.pausa();
-        d2.pausa();
-        d3.pausa();
-        d4.pausa();
-        btnPausa.setText("Riprendi");
-    } else {
-        d1.riprendi();
-        d2.riprendi();
-        d3.riprendi();
-        d4.riprendi();
+
+        if (d1 == null)  return;
+        if (c != null) c.ferma();
+        
+         // Ferma i danni casuali
+        if (dannoCasuale2 != null) dannoCasuale2.ferma();
+        if (dannoCasuale3 != null) dannoCasuale3.ferma();
+        if (dannoCasuale4 != null) dannoCasuale4.ferma();
+        
+
+        if (btnPausa.getText().equals("Pausa")) {
+            d1.pausa();
+            d2.pausa();
+            d3.pausa();
+            d4.pausa();
+            btnPausa.setText("Riprendi");
+        } else {
+            d1.riprendi();
+            d2.riprendi();
+            d3.riprendi();
+            d4.riprendi();
+              // Riavvia i danni casuali
+            if (dannoCasuale2 != null) dannoCasuale2.avvia();
+            if (dannoCasuale3 != null) dannoCasuale3.avvia();
+            if (dannoCasuale4 != null) dannoCasuale4.avvia();
+            
+            btnPausa.setForeground(java.awt.Color.WHITE);
         btnPausa.setText("Pausa");
-    }
+        }
 
     }//GEN-LAST:event_btnPausaActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
-    if (d1 == null) return;
-    
-    // Ferma il controllo vincitori
-    if (c != null) {
-        c.ferma();
-    }
-    
-    d1.reset();
-    d2.reset();
-    d3.reset();
-    d4.reset();
-    
-    pgrDrago1.setValue(0);
-    pgrDrago2.setValue(0);
-    pgrDrago3.setValue(0);
-    pgrDrago4.setValue(0);
-    
-    lblVincitore1.setText(" ");
-    lblVincitore2.setText(" ");
-    lblVincitore3.setText(" ");
-    lblVincitore4.setText(" ");
-    
-    btnPausa.setText("Pausa");
+
+        if (d1 == null) {
+            return;
+        }
+
+        // Ferma il controllo vincitori
+        if (c != null) {
+            c.ferma();
+        }
+ // Ferma i danni casuali
+        if (dannoCasuale2 != null) dannoCasuale2.ferma();
+        if (dannoCasuale3 != null) dannoCasuale3.ferma();
+        if (dannoCasuale4 != null) dannoCasuale4.ferma();
+        
+        d1.reset();
+        d2.reset();
+        d3.reset();
+        d4.reset();
+
+        pgrDrago1.setValue(0);
+        pgrDrago2.setValue(0);
+        pgrDrago3.setValue(0);
+        pgrDrago4.setValue(0);
+
+        lblVincitore1.setText(" ");
+        lblVincitore2.setText(" ");
+        lblVincitore3.setText(" ");
+        lblVincitore4.setText(" ");
+        //pulsanti
+        btnAvvia.setEnabled(true);
+        btnPausa.setEnabled(false);
+        btnReset.setEnabled(false);
+        btnGioca.setEnabled(false);
+        setupIconLabels(); //mette le icone all'inizio 
+        btnPausa.setForeground(java.awt.Color.WHITE);
+        btnPausa.setText("Pausa");
+		
     }//GEN-LAST:event_btnResetActionPerformed
 
     private void btnGiocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiocaActionPerformed
-          new JGioca().setVisible(true);
+          if (d1 != null){
+              new JGioca(d1).setVisible(true);
+          }else {
+              javax.swing.JOptionPane.showMessageDialog(this, 
+                "Devi prima avviare la gara!", 
+                "Attenzione", 
+                javax.swing.JOptionPane.WARNING_MESSAGE);
+          }
+        
+        
     }//GEN-LAST:event_btnGiocaActionPerformed
 
     /**
@@ -355,6 +415,7 @@ anim4.caricaIconaDrago("src/immagini/stormfly.gif");
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new JFrameGara().setVisible(true);
+                
             }
         });
     }
@@ -364,6 +425,7 @@ anim4.caricaIconaDrago("src/immagini/stormfly.gif");
     private javax.swing.JButton btnGioca;
     private javax.swing.JButton btnPausa;
     private javax.swing.JButton btnReset;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblDrago1;
     private javax.swing.JLabel lblDrago2;
     private javax.swing.JLabel lblDrago3;

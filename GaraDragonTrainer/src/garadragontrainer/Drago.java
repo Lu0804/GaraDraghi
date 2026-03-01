@@ -31,12 +31,15 @@ public class Drago implements Runnable{
     
     public void run() {
         Random rnd = new Random();
-        for (int i = 1; i <= 100; i++) {
+        
+        // Invece di un contatore fisso, usa un while che controlla il valore attuale
+        while (prgBar.getValue() < 100) {
             // Controlla reset
             if (reset) {
                 SwingUtilities.invokeLater(() -> prgBar.setValue(0));
                 return;
             }
+            
             // Controlla pausa
             synchronized (this) {
                 while (inPausa) {
@@ -45,9 +48,15 @@ public class Drago implements Runnable{
                     } catch (InterruptedException ignored) {}
                 }
             }
-            // Aggiorna la barra
-            int value = i;
-            SwingUtilities.invokeLater(() -> prgBar.setValue(value));
+            
+            // IMPORTANTE: Leggi il valore ATTUALE e incrementalo di 1
+            int valoreAttuale = prgBar.getValue();
+            int nuovoValore = valoreAttuale + 1;
+            
+            // Aggiorna la barra SOLO se non ha già raggiunto 100
+            if (nuovoValore <= 100) {
+                SwingUtilities.invokeLater(() -> prgBar.setValue(nuovoValore));
+            }
             
             // Aggiorna la posizione dell'animazione se presente
             if (animazione != null) {
