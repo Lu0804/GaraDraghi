@@ -74,7 +74,6 @@ private void setupVideo() {
         jPanel1.setBackground(new java.awt.Color(18, 22, 40));
         jPanel1.setLayout(null);
 
-        lblAttacco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/immagini/DragoAttacco.gif"))); // NOI18N
         lblAttacco.setMaximumSize(new java.awt.Dimension(500, 500));
         lblAttacco.setPreferredSize(new java.awt.Dimension(300, 300));
         jPanel1.add(lblAttacco);

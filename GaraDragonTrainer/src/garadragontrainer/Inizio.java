@@ -62,7 +62,7 @@ public class Inizio extends javax.swing.JFrame {
         jTextArea1.setSelectedTextColor(new java.awt.Color(210, 180, 100));
         jScrollPane1.setViewportView(jTextArea1);
 
-        lblSdentato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/immagini/sdentato.png"))); // NOI18N
+        lblSdentato.setIcon(new javax.swing.ImageIcon("src/immagini/sdentato.png"));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
