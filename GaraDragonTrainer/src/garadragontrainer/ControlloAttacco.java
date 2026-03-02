@@ -173,7 +173,7 @@ public class ControlloAttacco {
         eventoCorrente.setSchivato(true);
         System.out.println("✓ SCHIVATO! Bravo!");
         
-        // Feedback visivo positivo
+        // Se il giocatore schiva 
         btnSchiva.setText("SCHIVATO!");
         btnSchiva.setBackground(new java.awt.Color(0, 200, 0));
         btnSchiva.setForeground(java.awt.Color.WHITE);

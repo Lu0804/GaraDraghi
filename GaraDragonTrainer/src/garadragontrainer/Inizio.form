@@ -31,7 +31,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="3a" green="16" red="12" type="rgb"/>
+          <Color blue="a3" green="3b" red="12" type="rgb"/>
         </Property>
       </Properties>
       <Constraints>
@@ -119,7 +119,7 @@
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="37" green="21" red="1c" type="rgb"/>
+                  <Color blue="a3" green="3b" red="12" type="rgb"/>
                 </Property>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -129,7 +129,7 @@
                   <Color blue="d7" green="c3" red="be" type="rgb"/>
                 </Property>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="Questo gioco simula una gara di draghi. Giocare &#xe8; molto semplice:&#xa;Dopo aver premuto avvia si aprir&#xe0; una schermata con 4 bottoni; Avvia, Pausa Reset e Gioca;&#xa;Premi avvia per far iniziare la gara, vedrai i draghi greggiare sopra i bottino, tu sei il rpimo drago. &#xa;Se premi gioca si aprir&#xe0; una schermata dove potrai schivari gli attacchi della morte rossa, se vuoi fare&#xa;solo un gioco passivo vedrai semplicemnte alcuni draghi ogni tanto tornare insitro per gli attacchi. &#xa;Buon divertimento !"/>
+                <Property name="text" type="java.lang.String" value="Questo gioco simula una gara di draghi. Giocare &#xe8; molto semplice:&#xa;Dopo aver premuto avvia si aprir&#xe0; una schermata con 4 bottoni; Avvia, Pausa Reset e Gioca;&#xa;Premi avvia per far iniziare la gara, vedrai i draghi gareggiare; Tu sei il primo! &#xa;Se premi gioca si aprir&#xe0; una schermata dove potrai schivare gli attacchi della morte rossa! &#xa;se il bottone diventre&#xe0; verde vuol dire che sei riuscito a schivare l&apos;attacco. Vuoi fare&#xa;solo un gioco passivo? Gli altri draghi subiranno degli attacchi casuali.&#xa;Buon divertimento !"/>
                 <Property name="selectedTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="64" green="b4" red="d2" type="rgb"/>
                 </Property>

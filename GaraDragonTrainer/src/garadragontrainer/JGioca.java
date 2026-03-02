@@ -71,7 +71,7 @@ private void setupVideo() {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(420, 700));
 
-        jPanel1.setBackground(new java.awt.Color(18, 22, 40));
+        jPanel1.setBackground(new java.awt.Color(18, 59, 163));
         jPanel1.setLayout(null);
 
         lblAttacco.setMaximumSize(new java.awt.Dimension(500, 500));

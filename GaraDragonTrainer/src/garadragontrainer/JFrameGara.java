@@ -23,7 +23,7 @@ public class JFrameGara extends javax.swing.JFrame {
      * Le posiziona sopra le progress bar e le rende visibili
      */
     private void setupIconLabels() {
-        // Imposta dimensioni corrette (non 0!)
+        // Imposta dimensioni corrette
         lblIconDrago1.setSize(50, 50);
         lblIconDrago2.setSize(50, 50);
         lblIconDrago3.setSize(50, 50);
@@ -89,7 +89,7 @@ public class JFrameGara extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(18, 22, 40));
+        jPanel1.setBackground(new java.awt.Color(18, 59, 163));
         jPanel1.setDoubleBuffered(false);
         jPanel1.setMaximumSize(new java.awt.Dimension(910, 814));
         jPanel1.setMinimumSize(new java.awt.Dimension(910, 750));

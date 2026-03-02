@@ -37,7 +37,7 @@ public class Inizio extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(520, 500));
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(18, 22, 58));
+        jPanel1.setBackground(new java.awt.Color(18, 59, 163));
 
         lblTitolo.setBackground(new java.awt.Color(210, 175, 80));
         lblTitolo.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
@@ -53,12 +53,12 @@ public class Inizio extends javax.swing.JFrame {
         });
 
         jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(28, 33, 55));
+        jTextArea1.setBackground(new java.awt.Color(18, 59, 163));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Berlin Sans FB", 0, 12)); // NOI18N
         jTextArea1.setForeground(new java.awt.Color(190, 195, 215));
         jTextArea1.setRows(5);
-        jTextArea1.setText("Questo gioco simula una gara di draghi. Giocare è molto semplice:\nDopo aver premuto avvia si aprirà una schermata con 4 bottoni; Avvia, Pausa Reset e Gioca;\nPremi avvia per far iniziare la gara, vedrai i draghi greggiare sopra i bottino, tu sei il rpimo drago. \nSe premi gioca si aprirà una schermata dove potrai schivari gli attacchi della morte rossa, se vuoi fare\nsolo un gioco passivo vedrai semplicemnte alcuni draghi ogni tanto tornare insitro per gli attacchi. \nBuon divertimento !");
+        jTextArea1.setText("Questo gioco simula una gara di draghi. Giocare è molto semplice:\nDopo aver premuto avvia si aprirà una schermata con 4 bottoni; Avvia, Pausa Reset e Gioca;\nPremi avvia per far iniziare la gara, vedrai i draghi gareggiare; Tu sei il primo! \nSe premi gioca si aprirà una schermata dove potrai schivare gli attacchi della morte rossa! \nse il bottone diventreà verde vuol dire che sei riuscito a schivare l'attacco. Vuoi fare\nsolo un gioco passivo? Gli altri draghi subiranno degli attacchi casuali.\nBuon divertimento !");
         jTextArea1.setSelectedTextColor(new java.awt.Color(210, 180, 100));
         jScrollPane1.setViewportView(jTextArea1);
 

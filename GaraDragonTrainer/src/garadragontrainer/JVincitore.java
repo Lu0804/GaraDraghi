@@ -12,7 +12,7 @@ import java.awt.*;
  */
 public class JVincitore extends javax.swing.JFrame {
 
-    private int dragoVincitore; // 1=giocatore, 2/3/4=cpu
+    private int dragoVincitore; // 1=giocatore, 2/3/4= altri giocatori
 
     /**
      * @param dragoVincitore Il numero del drago che ha vinto (1=giocatore)
@@ -29,7 +29,7 @@ public class JVincitore extends javax.swing.JFrame {
     private void setupContenuto() {
         if (dragoVincitore == 1) {
             // IL GIOCATORE HA VINTO
-            lblRisultato.setText("🏆 HAI VINTO! 🏆");
+            lblRisultato.setText(" HAI VINTO! ");
             lblRisultato.setForeground(new java.awt.Color(255, 210, 60)); // oro
             lblSottotitolo.setText("Il tuo drago ha dominato la gara!");
             lblSottotitolo.setForeground(new java.awt.Color(200, 220, 255));
@@ -47,14 +47,14 @@ public class JVincitore extends javax.swing.JFrame {
     private void initComponents() {
 
         // Pannello con immagine di sfondo
-        pnlSfondo = new javax.swing.JPanel() {
+        pnlSfondo = new javax.swing.JPanel() { //creazione di un jpan generico per lo sfondo
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 // Carica e disegna l'immagine di sfondo
                 ImageIcon bg = new ImageIcon("src/immagini/Vinci.jpg");
                 if (bg.getIconWidth() > 0) {
-                    g.drawImage(bg.getImage(), 0, 0, getWidth(), getHeight(), this);
+                    g.drawImage(bg.getImage(), 0, 0, getWidth(), getHeight(), this); //adatta le dimensioni del Panel
                 } else {
                     // Fallback: gradiente blu notte se immagine non trovata
                     Graphics2D g2 = (Graphics2D) g;
